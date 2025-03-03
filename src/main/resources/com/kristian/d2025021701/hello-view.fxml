@@ -17,7 +17,7 @@
     <HBox>
         <VBox>
             <Label text="Seznam hráčů" />
-            <ListView fx:id="players" />
+            <ListView fx:id="players" onMouseClicked="#showPlayer"/>
         </VBox>
         <VBox>
             <Label text="Detaily hráče" />
@@ -27,8 +27,8 @@
                <TextField />
             </children>
          </HBox>
-         <Button text="Zobrazit" />
-         <Label text="Player info" />
+         <Button onAction="#showPlayer" text="Zobrazit" />
+         <Label fx:id="playerInfo" text="Player info" />
          <Button onAction="#addPlayer" text="Přidat hráče" />
          <Button onAction="#deletePlayer" text="Smazat hráče" />
          <Button onAction="#editPlayer" text="Upravit hráče" />
